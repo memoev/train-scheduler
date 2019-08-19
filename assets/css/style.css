@@ -4,8 +4,9 @@ body {
 }
 
 .jumbotron {
-    background: #008080;
-    color: #ffffff;
+    background: url(../images/thomas.png);
+    color: #008080;
+    text-shadow: -3px 0 #ffffff, 0 3px #ffffff, 3px 0 #ffffff, 0 -3px #ffffff;
     text-align: center;
 }
 
