@@ -27,14 +27,14 @@ $("#add-train-btn").on("click", function (event) {
     // Grabs user input
     var trainName = $("#train-name-input").val().trim();
     var trainDest = $("#destination-input").val().trim();
-    // var trainFirstTime = moment($("#firsttime-input").val().trim(), "MM/DD/YYYY").format("X");
+    var trainFirstTime = moment($("#firsttime-input").val().trim(), "MM/DD/YYYY").format("X");
     var trainFreq = $("#freq-input").val().trim();
 
     // Creates local "temporary" object for holding employee data
     var newTrain = {
         name: trainName,
         dest: trainDest,
-        // first: trainFirstTime,
+        first: trainFirstTime,
         freq: trainFreq
     };
 
@@ -44,7 +44,7 @@ $("#add-train-btn").on("click", function (event) {
     // Logs everything to console
     console.log(newTrain.name);
     console.log(newTrain.dest);
-    // console.log(newTrain.first);
+    console.log(newTrain.first);
     console.log(newTrain.freq);
 
     alert("Train successfully added");
