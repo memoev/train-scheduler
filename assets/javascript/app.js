@@ -55,3 +55,34 @@ $("#add-train-btn").on("click", function (event) {
     $("#firsttime-input").val("");
     $("#freq-input").val("");
 });
+
+database.ref().on("child_added", function (childSnapshot) {
+    console.log(childSnapshot.val());
+
+    // Store everything into a variable.
+    var trainName = childSnapshot.val().name;
+    var trainDest = childSnapshot.val().dest;
+    var trainFirstTime = childSnapshot.val().first;
+    var trainFreq = childSnapshot.val().freq;
+
+    // Employee Info
+    console.log(trainName);
+    console.log(trainDest);
+    console.log(trainFirstTime);
+    console.log(trainFreq);
+
+    var nextArrival = '';
+    var minutesAway = '';
+
+    // Create the new row
+    var newRow = $("<tr>").append(
+        $("<td>").text(trainName),
+        $("<td>").text(trainDest),
+        $("<td>").text(trainFreq),
+        $("<td>").text(nextArrival),
+        $("<td>").text(minutesAway),
+    );
+
+    // Append the new row to the table
+    $("#train-table > tbody").append(newRow);
+});
