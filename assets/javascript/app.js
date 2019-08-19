@@ -27,7 +27,7 @@ $("#add-train-btn").on("click", function (event) {
     // Grabs user input
     var trainName = $("#train-name-input").val().trim();
     var trainDest = $("#destination-input").val().trim();
-    var trainFirstTime = moment($("#firsttime-input").val().trim(), "MM/DD/YYYY").format("X");
+    var trainFirstTime = moment($("#firsttime-input").val().trim(), "hh:mm").format("HH:MM");
     var trainFreq = $("#freq-input").val().trim();
 
     // Creates local "temporary" object for holding employee data
