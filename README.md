@@ -13,7 +13,7 @@ Administrators/users have full permissions to submit a record into the database.
 - First Train Time
 - Frequency (in min)
 
-This app will calculare when the next train will arrive (Next Arrival) and minutes left between the current time and the Next Arrival, relative to the clock on the user's client. Rendering the results on a table. 
+This app will calculare when the next train will arrive (Next Arrival) and minutes left between the current time and the Next Arrival, relative to the clock on the user's client. Rendering the results on a table. It's important to mention that this application does NOT does input validation. *Empty input is allowed*, this will be fixed on the next release.
   
 ## Code Overview :deciduous_tree:
 
